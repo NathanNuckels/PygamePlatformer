@@ -16,7 +16,7 @@ class Player(pygame.sprite.Sprite):
         self.rect.y = y
         self.deltaX = 0
         self.deltaY = 0
-        self.walls = pygame.sprite.Group()
+        self.room = None
     def keydown(self,key,speed):
         self.speed = speed
         if key == pygame.K_LEFT:
@@ -50,19 +50,19 @@ class Player(pygame.sprite.Sprite):
         if not self.up and not self.down:
             self.deltaY = 0
         self.rect.x += self.deltaX
-        collisions = pygame.sprite.spritecollide(self,self.walls,False)
+        collisions = pygame.sprite.spritecollide(self,self.room.collition_blocks,False)
         for hit in collisions:
             if self.deltaX > 0:
                 self.rect.right = hit.rect.left
             else:
                 self.rect.left = hit.rect.right
         self.rect.y += self.deltaY
-        collisions = pygame.sprite.spritecollide(self,self.walls,False)
+        collisions = pygame.sprite.spritecollide(self,self.room.collition_blocks,False)
         for hit in collisions:
             if self.deltaY > 0:
                 self.rect.bottom = hit.rect.top
             else:
                 self.rect.top = hit.rect.bottom
-    def set_walls(self,wall):
-        self.walls = wall
+    def set_room(self,room):
+        self.room = room
 #-------------------------------------------------------------------------------------

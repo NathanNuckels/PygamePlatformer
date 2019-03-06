@@ -7,12 +7,12 @@ class Block(pygame.sprite.Sprite):
         self.width = width
         self.height = height
         self.color = color
-        if self.image is not None:
+        if image is not None:
             self.image = image
         else:
             self.image = pygame.Surface([width,height])
             self.image.fill(color)
-        self.rect = self.image.getRect()
+        self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y
         

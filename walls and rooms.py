@@ -32,7 +32,7 @@ def main():
     screen = pygame.display.set_mode([screenWidth,screenHeight])
     pygame.display.set_caption("Walls and rooms")
     sprites = pygame.sprite.Group()
-    player = Player(100,50,20,20,colors["player"])
+    player = Player(100,50,70,70,colors["player"])
     clock = pygame.time.Clock()
     curentRoom = 0
     done = False
@@ -48,15 +48,15 @@ def main():
             elif event.type == pygame.KEYUP:
                 player.keyup(event.key)
         #GAME LOGIC----------------------------------------------
-        player.set_walls(rooms[curentRoom].wall_list)
+        player.set_room(rooms[curentRoom])
         sprites.update()
+        rooms[curentRoom].update()
         if player.rect.x <= -player.rect.width:
             shift_room("left",player)
         elif player.rect.x >= screenWidth+player.rect.width:
             shift_room("right",player)
         #DRAWING-------------------------------------------------
-        screen.fill(colors["screen"])
-        rooms[curentRoom].wall_list.draw(screen)
+        rooms[curentRoom].draw(screen)
         sprites.draw(screen)
         pygame.display.flip()
         clock.tick(60)

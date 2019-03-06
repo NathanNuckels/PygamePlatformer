@@ -22,9 +22,9 @@ def createRoom(filename):
             width = 70
             height = 70
             column = 0
-            can_colide = True
-            image = None
             for char in line:
+                image = None
+                can_colide = True
                 x = width *column
                 y = height * row
                 if char ==".":
@@ -43,7 +43,6 @@ def createRoom(filename):
                     collition_blocks.add(block)
                 else:
                     background_blocks.add(block)
-                walls.append((x,y,width,height,color,char))
                 column+=1
             row+=1
         return background_blocks, collition_blocks
@@ -51,17 +50,19 @@ class Room(object):
     '''wall_list =None
     coin_list = None'''
     background_Blocks = None
+    background_color = white
     collition_blocks = None
     screen_width: int = 0
     screen_height: int = 0
     def __init__(self,screenWidth,screenHeight,filename):
-        '''self.wall_list = pygame.sprite.Group()
-        self.coin_list = pygame.sprite.Group()'''
+        self.background_blocks, self.collition_blocks = createRoom(filename)
         self.screen_width = screenWidth
         self.screen_height = screenHeight
-        '''walls = createRoom(filename)
-        for item in walls:
-            if item[5] is not ".":
-                wall = Wall(item[0],item[1],item[2],item[3],item[4])
-                self.wall_list.add(wall)'''
+    def update(self):
+        self.background_blocks.update()
+        self.collition_blocks.update()
+    def draw(self,screen):
+        screen.fill(self.background_color)
+        self.background_blocks.draw(screen)
+        self.collition_blocks.draw(screen)
 #-------------------------------------------------------------------------------------
