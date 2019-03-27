@@ -1,0 +1,36 @@
+body{
+	background-color: blue;
+}
+h1,a#footer,h2{
+	text-align: center;
+	color: gold;
+	background-color: black;
+	padding:0;
+	margin:0;
+}
+p {
+	text-align: center;
+	color: white;
+}
+address {
+	text-align: center;
+	color: white;
+}
+a{
+	text-align: center;
+	background-color: #00ff00;
+	color: red;
+    text-decoration: none;
+}
+p#code{
+	background-color:black;
+	color:#00ff00;
+	margin:0;
+	text-align:left;
+}
+p#surge{
+	background-color:white;
+	color:black;
+	margin:0;
+	text-align:left;
+}

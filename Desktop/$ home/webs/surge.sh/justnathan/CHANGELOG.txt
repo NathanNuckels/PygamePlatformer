@@ -1,0 +1,51 @@
+welcome to my change log!
+NOTE: dates before 03/19/2018 5:20PM are unknown
+NOTE: the first update was at 03/14/2018 around 6:30PM
+version - whats added
+
+0.1.0 - 
+created domain
+created index.html
+added css to index.html
+named the website "justnathan"
+
+0.2.0 - 
+renamed index.html to 404.html
+created new index.html
+edit css for 404.html
+copy css from 404.html to index.html
+
+0.3.0 - 
+added the "old" link
+under the old link added the old website
+(the old website only worked on my wifi and had no css)
+added css off demenstration
+
+0.4.0 -
+added tutorials page
+
+0.5.0 03/19/2018 5:28PM <<<NEW>>> - 
+created downloads link
+added justnathan.surge.sh/downloadFULL.html
+added change log
+added note if dev folder is uploaded
+(the dev folder is were the website is in)
+(what if i upload the whole folder and not just the website)
+
+0.6.0 03/21/2018 4:13PM <<<INCOMPLETE>>> - 
+orginized the tutorials page
+made all css in one file
+added minecraft server tutorial
+CREATED:
+justnathan.surge.sh/data.css
+justnathan.surge.sh/404.css
+justnathan.surge.sh/tutorials/surge.html
+.justnathan.surge.sh/tutorials/server.html
+.justnathan.surge.sh/default.html
+EDITED:
+justnathan.surge.sh
+justnathan.surge.sh/downloads
+justnathan.surge.sh/tutorials
+justnathan.surge.sh/tutorials/surge.html
+justnathan.surge.sh/main
+justnathan.surge.sh/404.html
